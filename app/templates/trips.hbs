@@ -1,0 +1,17 @@
+<div style="margin-top:100px">
+  <div horizontal around-justified layout>
+    {{#each trip in firstRow}}
+      {{#link-to "nearby" trip}}
+        {{trip-card trip=trip}}
+      {{/link-to}}
+    {{/each}}
+  </div>
+
+  <div horizontal around-justified layout>
+    {{#each trip in secondRow}}
+      {{#link-to "nearby" trip}}
+        {{trip-card trip=trip}}
+      {{/link-to}}
+    {{/each}}
+  </div>
+</div>

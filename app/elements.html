@@ -1,0 +1,105 @@
+<link rel="import" href="../bower_components/core-elements/core-elements.html">
+<link rel="import" href="../bower_components/paper-elements/paper-elements.html">
+<link rel="import" href="../bower_components/font-roboto/roboto.html">
+<link rel="import" href="../bower_components/core-icons/av-icons.html">
+<link rel="import" href="../bower_components/core-icons/communication-icons.html">
+<link rel="import" href="../bower_components/core-icons/device-icons.html">
+<link rel="import" href="../bower_components/core-icons/editor-icons.html">
+<link rel="import" href="../bower_components/core-icons/hardware-icons.html">
+<link rel="import" href="../bower_components/core-icons/image-icons.html">
+<link rel="import" href="../bower_components/core-icons/maps-icons.html">
+<link rel="import" href="../bower_components/core-icons/notification-icons.html">
+<link rel="import" href="../bower_components/core-icons/social-icons.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/cascade-transition.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/core-transition-pages.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/cross-fade.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/hero-transition.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/list-cascade.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/scale-up.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/slide-down.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/slide-from-bottom.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/slide-from-right.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/slide-up.html">
+<link rel="import" href="../bower_components/core-animated-pages/transitions/tile-cascade.html">
+<link rel="import" href="slide-up-cross-fade.html">
+<link rel="import" href="slide-from-left-fo-shizzle.html">
+<link rel="import" href="slide-from-right-fo-shizzle.html">
+
+
+<polymer-element name="svg-pulsing-circle" attributes="color duration startscale endscale">
+  <template>
+    <style>
+      .circle {
+        width:100px;
+        height:100px;
+        border-radius:100px;
+      }
+    </style>
+    <svg class="circle" height="100" width="100">
+      <circle cx="50" cy="50" r="40" fill={{color}} />
+    </svg>
+  </template>
+  <script>
+    Polymer({
+      color: 'blue',
+      duration: 2200,
+      ready: function() {
+        this.color = 'yellow';
+        var circle = this.shadowRoot.querySelector('.circle');
+        circle.animate([
+          {opacity: "1.0", transform: "scale(0)"},
+          {opacity: "0", transform: "scale(10)"}
+        ],
+        {
+          duration: this.duration,
+          easing: 'cubic-bezier(.22,.67,.52,.92)',
+          fill: 'forwards',
+          iterations: Infinity
+        });
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="pulsing-circle" attributes="color duration startscale endscale">
+  <template>
+    <style>
+      .circle {
+        width:100px;
+        height:100px;
+        border-radius:100px;
+      }
+    </style>
+    <div class="circle" style="background-color:{{color}}; z-index:-1;">
+    </div>
+  </template>
+  <script>
+    Polymer({
+      color: 'blue',
+      duration: 1200,
+      ready: function() {
+        this.color = 'yellow';
+        var circle = this.shadowRoot.querySelector('.circle');
+        circle.animate([
+          {opacity: "1.0", transform: "scale(5)"},
+          {opacity: ".9", transform: "scale(10)"},
+          {opacity: ".8", transform: "scale(10)"},
+          {opacity: "0", transform: "scale(15)"}
+        ],
+        {
+          duration: this.duration,
+          easing: 'cubic-bezier(.22,.67,.52,.92)',
+          fill: 'forwards',
+          // iterations: Infinity
+        });
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="fa-icon" attributes="icon size spin rotate flip inverse stack pull-left border fw" noscript>
+  <template>
+    <link href="../bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <i class="fa fa-{{icon}} {{spin ? 'fa-spin' : ''}} {{size ? 'fa-' + size : ''}} {{rotate ? 'fa-rotate-' + rotate : ''}} {{flip ? 'fa-flip-' + flip : ''}} {{inverse ? 'fa-inverse' : ''}} {{stack ? 'fa-stack-' + stack : ''}} {{pull-left ? 'pull-left' : ''}} {{border ? 'fa-border' : ''}} {{fw ? 'fa-fw' : ''}}"></i>
+  </template>
+</polymer-element>

@@ -1,0 +1,268 @@
+@import "bower_components/fontawesome/scss/font-awesome.scss";
+
+body {
+  margin-top:0px;
+  padding-bottom:30px;
+  background-color: white;
+  font-family: RobotoDraft;
+}
+
+.card {
+  display: inline-block;
+  background: white;
+  width: 300px;
+  height: 190px;
+  padding: 0px;
+  border-radius: 6px;
+  margin:16px;
+  box-sizing: border-box;
+}
+
+.avatar {
+  position: absolute;
+  top: 36px;
+  left: 10px;
+  width: 74px;
+  height: 74px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.avatar img {
+  width: 74px;
+  height: 74px;
+  overflow: hidden;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  z-index: 100000;
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  box-sizing:border-box;
+}
+
+.trip-bg-small {
+  height: 100px;
+  width: 300px;
+  border-radius: 4px 4px 0px 0px;
+  box-sizing: border-box;
+}
+
+.card-container {
+  width: 300px;
+  height: 190px;
+}
+
+.title-container {
+  background-color: #434a54;
+  width: 100%;
+  height: 34px;
+}
+
+.title {
+  color: white;
+  font-size: 0.9em;
+  box-sizing: border-box;
+}
+
+.details-top {
+  height: 14.4px;
+  padding: 10px 8px 8px 8px;
+}
+
+.guide-name {
+  font-size: 12.6px;
+  color: rgb(0, 0, 0);
+  cursor: auto;
+  display: block;
+  font-family: RobotoDraft;
+  font-weight: 500;
+  height: 14px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.dollars {
+  font-size: 10.5px;
+  color: grey;
+  font-weight: 200;
+  box-sizing: border-box;
+}
+
+.details-bottom {
+  height: 15.2px;
+  padding: 0px 8px 0px 8px;
+}
+
+.reviews-container {
+  font-size: 10px;
+  opacity: 0.4;
+  color: grey;
+}
+
+.stars {
+  font-size: 10px;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+
+.reviews {
+  font-size: 9px;
+}
+
+.tag {
+  font-size: 12.8px;
+  color: grey;
+  font-weight: 200;
+}
+
+.card-lg {
+  display: inline-block;
+  background: white;
+  width: 750px;
+  height: 475px;
+  padding: 0px;
+  border-radius: 6px;
+  box-sizing:border-box;
+}
+
+.avatar-lg {
+  position: absolute;
+  top: 90px;
+  left: 25px;
+  height: 185px;
+  width: 185px;
+  box-sizing: border-box;
+}
+
+.avatar-lg img {
+  width: 185px;
+  height: 185px;
+  overflow: hidden;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  z-index: 100000;
+  border: 5px solid rgba(255, 255, 255, 0.72);
+  box-sizing:border-box;
+}
+
+.trip-bg-lg {
+  height: 250px;
+  width: 750px;
+  border-radius: 10px 10px 0px 0px;
+  box-sizing:border-box;
+}
+
+.card-container-lg {
+  width: 750px;
+  height: 475px;
+}
+
+.title-container-lg {
+  background-color: #434a54;
+  width: 100%;
+  height: 85px;
+}
+
+.title-lg {
+  color: white;
+  font-size: 2.25em;
+  box-sizing: border-box;
+}
+
+.details-top-lg {
+  height: 36px;
+  padding: 25px 20px 20px 20px;
+}
+
+.guide-name-lg {
+  font-size: 31.5px;
+  color: rgb(0, 0, 0);
+  cursor: auto;
+  display: block;
+  font-family: RobotoDraft;
+  font-weight: 500;
+  height: 35px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.dollars-lg {
+  font-size: 26.25px;
+  color: grey;
+  font-weight: 200;
+  box-sizing: border-box;
+}
+
+.details-bottom-lg {
+  height: 38px;
+  padding: 0px 20px 0px 20px;
+}
+
+.reviews-container-lg {
+  font-size: 25px;
+  opacity: 0.4;
+  color: grey;
+}
+
+.stars-lg {
+  font-size: 25px;
+  margin-right: 12.5px;
+  margin-top: 10px;
+}
+
+.reviews-lg {
+  font-size: 22.5px;
+}
+
+.tag-lg {
+  font-size: 32px;
+  color: grey;
+  font-weight: 200;
+}
+
+.found-container {
+  width:1030px;
+  height:700px;
+  background-size:1030px 700px;
+  margin-left:-10px;
+}
+
+.found-text-container {
+  position:relative;
+  left:-20px;
+  color:white;
+}
+
+.found-text {
+  font-size:8em;
+  position:relative;
+  left:-20px;
+  text-shadow: 2px 2px grey;
+}
+
+.trip-details-container {
+  margin-top:180px;
+}
+
+.details-card {
+  display: inline-block;
+  background: white;
+  box-sizing: border-box;
+  width: 980px;
+  margin: 16px;
+  padding: 0px;
+  border-radius: 4px;
+}
+
+
+.back {
+  cursor:pointer;
+  color:grey;
+  position:absolute;
+  top:2px;
+  left:5px;
+  z-index:3;
+}

@@ -1,0 +1,57 @@
+<!--
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link href="../bower_components/core-animated-pages/transitions/core-transition-pages.html" rel="import">
+
+<core-style id="slide-up-cross-fade">
+  polyfill-next-selector { content: ':host.slide-up-cross-fade > * [slide-up-cross-fade]'; }
+  :host(.slide-up-cross-fade) ::content > * /deep/ [slide-up-cross-fade] {
+    -webkit-transition: -webkit-transform {{g.transitions.slideDuration || g.transitions.duration}} cubic-bezier(0.4, 0, 0.2, 1), opacity {{g.transitions.xfadeDuration || g.transitions.duration}} cubic-bezier(0.4, 0, 0.2, 0.25);
+    transition: transform {{g.transitions.slideDuration || g.transitions.duration}} cubic-bezier(0.4, 0, 0.2, 1), opacity {{g.transitions.xfadeDuration || g.transitions.duration}} cubic-bezier(0.4, 0, 0.2, 0.25);
+  }
+
+  polyfill-next-selector { content: ':host > .core-selected [slide-up-cross-fade]'; }
+  ::content > .core-selected /deep/ [slide-up-cross-fade] {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  polyfill-next-selector { content: ':host > [animate]:not(.core-selected) [slide-up-cross-fade]'; }
+  ::content > [animate]:not(.core-selected) /deep/ [slide-up-cross-fade] {
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    opacity: 0;
+  }
+</core-style>
+
+<!--
+
+`slide-up-cross-fade` slides an element in the outgoing page from the bottom of the window
+and slides in an element in the incoming page from the bottom of the window during
+a page transition. You can configure the duration of the transition with the global
+variable `CoreStyle.g.transitions.slideDuration`.
+
+Example:
+
+    <core-animated-pages transition="slide-up-cross-fade">
+      <section>
+        <div id="div1" slide-up-cross-fade></div>
+      </section>
+      <section></section>
+    </core-animated-pages>
+
+@class slide-up-cross-fade
+@extends core-transition-pages
+@status beta
+@homepage github.io
+
+-->
+
+<core-transition-pages id="slide-up-cross-fade" activeClass="slide-up-cross-fade"></core-transition-pages>

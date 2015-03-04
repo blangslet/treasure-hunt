@@ -1,0 +1,13 @@
+<div vertical layout class="found-container" style="background-image: url({{model.bgPicPath}})">
+  <div vertical layout>
+    <div horizontal around-justified layout center>
+        {{trip-card trip=model}}
+      <div class="found-text-container">
+        <h2 class="found-text">Found!</h2>
+      </div>
+    </div>
+    <div class="trip-details-container" vertical layout>
+      {{trip-details trip=model}}
+    </div>
+  </div>
+</div>
