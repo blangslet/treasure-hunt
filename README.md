@@ -1,17 +1,12 @@
-# Trip-treasure-hunt-emberconf
+# Ember + Polymer Treasure-Hunt
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app demonstrates an experimental integration between ember.js routing and Polymer's core-animated-pages component to create beautiful inter-state animated transitions.
 
-## Prerequisites
+This is also a hybrid Cordova app that utilizes iOS8's new WKWebView and runs in landscape mode on iPads.
 
-You will need the following things properly installed on your computer.
+There has not been any effort yet put into performance optimizations, and the original ideas was to trigger state transitions based on proximity to BLE iBeacons. That will hopefully be implemented soon along with a number of other fun things! 😁 
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Please contribute ideas, issues and PRs!
 
 ## Installation
 
@@ -24,30 +19,3 @@ You will need the following things properly installed on your computer.
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
