@@ -8,6 +8,8 @@ There has not been any effort yet put into performance optimizations, and the or
 
 Please contribute ideas, issues and PRs!
 
+![](https://github.com/blangslet/treasure-hunt/blob/master/public/img/app-screenshot.jpg)
+
 ## Installation
 
 * `git clone <repository-url>` this repository
