@@ -16,6 +16,7 @@ Please contribute ideas, issues and PRs!
 * change into the new directory
 * `npm install`
 * `bower install`
+* `npm install -g cordova`
 
 ## Running / Development
 
